@@ -1,0 +1,1 @@
+A boilerplate for creating web applications using React, Redux, React-Router and Webpack

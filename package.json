@@ -1,0 +1,42 @@
+{
+  "name": "react-redux-webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for creating web applications using React, Redux, React-Router and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development --hot --display-error-details",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddcp/react-redux-router-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-router"
+  ],
+  "author": "Eduardo Paiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eddcp/react-redux-router-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Eddcp/react-redux-router-boilerplate#readme",
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
