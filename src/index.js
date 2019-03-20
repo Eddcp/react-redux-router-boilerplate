@@ -3,21 +3,17 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-import Home from './pages/Home';
-import NewsPage from './pages/NewsPage';
-import reducers from './reducers';
+import reducers from './store/reducers';
+import App from './App';
 
 const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <div>
-        <Route path="/" exact component={Home} />
-        <Route path="/newspage" component={NewsPage} />
-      </div>
+      <App />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

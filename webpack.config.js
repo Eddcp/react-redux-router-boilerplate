@@ -14,6 +14,7 @@ module.exports = {
     modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   module: {
+    // loader for js files invoking the transpiler from ES6 to ES5
     rules: [
       {
         test: /\.(js|jsx)$/,
