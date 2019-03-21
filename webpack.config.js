@@ -1,36 +1,13 @@
-'use strict';
 
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const merge = require('webpack-merge');
+const common = require('./config/webpack.common.config');
 
-module.exports = {
-  entry: path.join(__dirname, 'src/index.js'),
-  output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/'
-  },
-  resolve: {
-    modules: [path.resolve(__dirname, 'src'), 'node_modules']
-  },
-  module: {
-    // loader for js files invoking the transpiler from ES6 to ES5
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
-  },
-  devServer: {
-    historyApiFallback: true
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'public/index.html')
-    })
-  ]
-}
+const envs = {
+    development: 'dev',
+    production: 'prod'
+};
+
+console.log(process.env.NODE_ENV);
+const env = envs[process.env.NODE_ENV || 'development'];
+const envConfig = require(`./config/webpack.${env}.config`);
+module.exports = merge(common, envConfig);

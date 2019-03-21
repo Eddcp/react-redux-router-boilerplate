@@ -5,6 +5,8 @@ import Header from './components/presentational/Header';
 
 import { Route } from 'react-router-dom';
 
+import './styles/main.scss';
+
 const App = () => {
   return (
     <React.Fragment>

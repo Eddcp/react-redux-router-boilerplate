@@ -1,11 +1,14 @@
 {
   "name": "react-redux-webpack-boilerplate",
+  "sideEffects": [
+    "*.scss"
+  ],
   "version": "1.0.0",
   "description": "A boilerplate for creating web applications using React, Redux, React-Router and Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development --hot --display-error-details",
-    "build": "webpack --mode production"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot --display-error-details",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   },
   "homepage": "https://github.com/Eddcp/react-redux-router-boilerplate#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
@@ -35,9 +39,18 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   }
 }
