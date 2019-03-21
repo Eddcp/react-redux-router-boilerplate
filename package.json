@@ -8,7 +8,8 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot --display-error-details",
-    "build": "cross-env NODE_ENV=production webpack --mode production"
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "test": "jest ./test"
   },
   "repository": {
     "type": "git",
@@ -41,10 +42,14 @@
     "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.5.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "react-test-renderer": "^16.8.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.2",

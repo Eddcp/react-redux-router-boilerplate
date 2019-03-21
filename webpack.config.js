@@ -7,7 +7,6 @@ const envs = {
     production: 'prod'
 };
 
-console.log(process.env.NODE_ENV);
 const env = envs[process.env.NODE_ENV || 'development'];
 const envConfig = require(`./config/webpack.${env}.config`);
 module.exports = merge(common, envConfig);
