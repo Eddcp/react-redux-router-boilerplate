@@ -6,6 +6,6 @@ import { Route } from 'react-router-dom';
 describe('<App />', () => {
   it('should render some routes', () => {
     const renderedComponent = shallow(<App />);
-    exportAllDeclaration(renderedComponent.find(Route).length).not.toBe(0);
+    expect(renderedComponent.find(Route).length).not.toBe(0);
   });
 });

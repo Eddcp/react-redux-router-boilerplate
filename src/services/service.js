@@ -1,4 +1,8 @@
 import axios from 'axios';
+import URL from '../constants/URL';
+
+const { API } = URL;
+
 
 class Service {
   get(URL, params={}) {
@@ -22,7 +26,11 @@ class Service {
   }
 
   request(URL, params, method) {
-    return axios[method](URL, {
+    const service = axios.create({
+      baseURL: API
+    });
+
+    return service[method](URL, {
       params
     });
   }

@@ -1,9 +1,9 @@
 import React from 'react';
 import Home from './pages/Home';
-import NewsPage from './pages/NewsPage';
+import PostsPage from './pages/PostsPage';
 import Header from './components/presentational/Header';
 
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import './styles/main.scss';
 
@@ -11,10 +11,10 @@ const App = () => {
   return (
     <React.Fragment>
       <Header />
-      <main>
+      <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/newspage" component={NewsPage} />
-      </main>
+        <Route path="/postspage" component={PostsPage} />
+      </Switch>
     </React.Fragment>
   );
 };

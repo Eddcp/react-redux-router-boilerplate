@@ -7,7 +7,9 @@ module.exports = merge(commonConfig, {
   mode: 'development',
   devServer: {
     historyApiFallback: true,
-    overlay: true
+    overlay: true,
+    host: 'localhost',
+    port: 3000
   },
   module: {
     rules: [
