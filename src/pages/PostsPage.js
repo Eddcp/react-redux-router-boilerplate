@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
-import { fetchPosts } from '../store/actions/posts-actions';
-import { connect } from 'react-redux';
+import PostsList from '../components/container/PostsList';
+
 
 class PostsPage extends Component {
-  componentDidMount() {
-    this.props.fetchPosts();
-  }
-
+  
   render() {
-    return this.props.posts.map(post => {
-      return (
-        <div className="description">
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
-        </div>
-      );
-    });
-  }
+    return (
+      <div>
+        PostsPage
+        <PostsList />
+      </div>
+    );
+  } 
 }
 
-const mapStateToProps = (state) => {
-  return { posts: state.posts };
-}
-
-export default connect(mapStateToProps, { fetchPosts })(PostsPage);
+export default PostsPage;

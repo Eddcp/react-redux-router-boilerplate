@@ -17,6 +17,14 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        enforce: "pre", //Enforces that's a pre-loader must be executed before normal loaders
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader'
+        }
       }
     ]
   },
