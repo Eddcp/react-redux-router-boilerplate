@@ -9,11 +9,14 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --hot --display-error-details",
     "build": "cross-env NODE_ENV=production webpack",
-    "precommit": "npm run lint && npm test",
-    "prepush": "npm run lint && npm test",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "eslint src/**/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test"
+    }
   },
   "jest": {
     "setupFilesAfterEnv": [
