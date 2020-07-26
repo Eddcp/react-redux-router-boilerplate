@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import PostsPage from './pages/PostsPage';
+import ItemsPage from './pages/ItemsPage';
 import Header from './components/presentational/Header';
 
 import { Route, Switch } from 'react-router-dom';
@@ -14,6 +15,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/postspage" component={PostsPage} />
+        <Route path="/items" component={ItemsPage} />
       </Switch>
     </React.Fragment>
   );

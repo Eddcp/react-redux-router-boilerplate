@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are multiple items 1`] = `
+<ul>
+  <li>
+    one
+  </li>
+  <li>
+    two
+  </li>
+  <li>
+    three
+  </li>
+</ul>
+`;
+
+exports[`renders correctly when there are no items 1`] = `
+<span>
+  No items in list
+</span>
+`;
+
+exports[`renders correctly when there is one item 1`] = `
+<span>
+  one
+</span>
+`;
