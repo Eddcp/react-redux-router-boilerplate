@@ -42,7 +42,7 @@ describe('fetchData', () => {
         `${API}/book`,
       );
     
-    await expect(fetchData('react')).resolves.toEqual(data);
+    await expect(fetchData()).resolves.toEqual(data);
   });
 
   it('fetches erroneously data from an API', async () => {
@@ -52,6 +52,6 @@ describe('fetchData', () => {
       Promise.reject(new Error(errorMessage)),
     );
 
-    await expect(fetchData('react')).rejects.toThrow(errorMessage);
+    await expect(fetchData()).rejects.toThrow(errorMessage);
   });
 });
